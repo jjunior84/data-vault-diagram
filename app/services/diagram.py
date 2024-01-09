@@ -54,22 +54,20 @@ class DiagramService:
 
     def _parse_edges(self, source: str, connections: List[Connection]) -> List[Node]:
         edges = []
+        arrow_dict = {}
         if connections:
             for conn in connections:
-                arrows_to = {}
-                arrows_from = {}
-
                 if conn.cardinality:
                     cardinal_to, cardinal_from = conn.cardinality.split("-to-")
 
-                    arrows_to = self._get_arrow_info(cardinal_to)
-                    arrows_from = self._get_arrow_info(cardinal_from)
+                    arrow_dict["to"] = self._get_arrow_info(cardinal_to)
+                    arrow_dict["from"] = self._get_arrow_info(cardinal_from)
 
                 edges.append(
                     Edge(
                         source=source,
                         target=conn.target,
-                        arrows={"to": arrows_to, "from": arrows_from},
+                        arrows=arrow_dict,
                         title=conn.cardinality,
                         **conn.extra_attr if conn.extra_attr else {},
                     )
