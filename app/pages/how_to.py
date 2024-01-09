@@ -32,8 +32,8 @@ with st.container():
     st.markdown("#### Diagram Area")
     st.markdown(
         "**Presentation area:** Here it is where the diagram comes to life and draw \
-        itself based on the code provided. The graph is automatically displayed and each\
-        entity can be dragged for a different position to rearrange."
+        itself based on the code provided. The graph is automatically displayed and \
+        each entity can be dragged for a different position to rearrange."
     )
     st.markdown(
         "Cardinality in the edges when defined in the code is represented by a bar ▎\
