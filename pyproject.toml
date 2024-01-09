@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "data-vault-diagram"
+version = "0.1.0"
+description = "Streamlit app to help build Data Vault ER diagrams."
+authors = ["Jonatas Architect <jonatas.architect@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.29.0"
+streamlit-agraph = "^0.0.45"
+pydantic = "^2.5.2"
+pydantic-settings = "^2.1.0"
+pyyaml = "^6.0.1"
+streamlit-code-editor = "^0.1.10"
+pandas = "^2.1.4"
+st-pages = "^0.4.5"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+bandit = "^1.7.6"
+types-pyyaml = "^6.0.12.12"
+ruff = "^0.1.8"
+
+[tool.ruff]
+select = ["E", "W", "F", "C", "I", "N", "U", "B", "ANN", "S", "Q", "D"]
+exclude = [
+    ".venv",
+    ".git",
+    ".mypy_cache",
+    "ruff_cache",
+    "pyproject.toml",
+    "__pycache__"
+]
+line-length = 88
+indent-width = 4
+
+[tool.ruff.format]
+indent-style = "space"
+docstring-code-format = true
+docstring-code-line-length = 88
+
+[tool.ruff.lint]
+ignore = ["E266", "D203", "D107", "D104", "D205", "ANN101", "ANN102", "ANN401"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+docstring-quotes = "double"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+
+[tool.ruff.lint.mccabe]
+max-complexity = 11
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+backend-path = ["app"]
+

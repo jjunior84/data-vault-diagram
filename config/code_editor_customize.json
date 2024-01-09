@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Copy",
+    "feather": "Copy",
+    "hasText": true,
+    "alwaysOn": true,
+    "commands": [
+      "copyAll",
+      [
+        "infoMessage",
+        {
+          "text": "Copied to clipboard!",
+          "timeout": 2500,
+          "classToggle": "show"
+        }
+      ]
+    ],
+    "style": {
+      "top": "0rem",
+      "right": "0.4rem"
+    }
+  },
+  {
+    "name": "Render",
+    "feather": "Share2",
+    "primary": true,
+    "hasText": true,
+    "showWithIcon": true,
+    "commands": [
+      "submit"
+    ],
+    "style": {
+      "bottom": "0.44rem",
+      "right": "0.4rem"
+    }
+  }
+]

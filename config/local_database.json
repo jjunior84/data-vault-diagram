@@ -1,0 +1,304 @@
+{
+    "dvparameter": [
+        {
+            "dv_id": "RV_HUB",
+            "dv_image_name": "RV-1HUB.png",
+            "dv_type": "HUB",
+            "dv_naming_convention": [
+                "hub_",
+                "H_"
+            ],
+            "dv_description": "Raw Vault Hub"
+        },
+        {
+            "dv_id": "BV_HUB",
+            "dv_image_name": "BV-1HUB.png",
+            "dv_type": "HUB",
+            "dv_naming_convention": [
+                "hub_",
+                "H_"
+            ],
+            "dv_description": "Business Vault Hub"
+        },
+        {
+            "dv_id": "RV_SATELLITE",
+            "dv_image_name": "RV-3SATELLITE.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_",
+                "S_"
+            ],
+            "dv_description": "Raw Vault Satellite"
+        },
+        {
+            "dv_id": "RV_SAT_NON_HISTORIZED",
+            "dv_image_name": "RV-3NONHISTORISED-SATELLITE.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_nh_",
+                "NHS_"
+            ],
+            "dv_description": "Raw Vault Non-historized Satellite"
+        },
+        {
+            "dv_id": "RV_SAT_DEP_KEY",
+            "dv_image_name": "RV-3SATELLITE-DEPKEY.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_dp_",
+                "SDP_"
+            ],
+            "dv_description": "Raw Vault Satellite with dependent-child key"
+        },
+        {
+            "dv_id": "RV_SAT_EFFECTIVITY",
+            "dv_image_name": "RV-3SATELLITE-EFFECTIVITY.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_ef_",
+                "EFS_"
+            ],
+            "dv_description": "Raw Vault Effectivity satellite"
+        },
+        {
+            "dv_id": "RV_SAT_MULTIACTIVE",
+            "dv_image_name": "RV-3SATELLITE-MULTIACTIVE.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_ma_",
+                "SMA_"
+            ],
+            "dv_description": "Raw Vault Multi-active satellite"
+        },
+        {
+            "dv_id": "RV_SAT_RECORD_TRACKING",
+            "dv_image_name": "RV-3SATELLITE-RECORDTRACKING.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_rt_",
+                "RTS_"
+            ],
+            "dv_description": "Raw Vault Record tracking satellite"
+        },
+        {
+            "dv_id": "RV_SAT_RECORD_TRACKING_EXT",
+            "dv_image_name": "RV-3SATELLITE-RECORDTRACKINGEXTENDED.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_",
+                "S_"
+            ],
+            "dv_description": "Raw Vault Extended record tracking satellite"
+        },
+        {
+            "dv_id": "RV_SAT_STATUS_TRACKING",
+            "dv_image_name": "RV-3SATELLITE-STATUSTRACKING.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_xt_",
+                "XTS_"
+            ],
+            "dv_description": "Raw Vault Status tracking satellite"
+        },
+        {
+            "dv_id": "BV_SATELLITE",
+            "dv_image_name": "BV-3SATELLITE.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_",
+                "S_"
+            ],
+            "dv_description": "Business Vault Satellite"
+        },
+        {
+            "dv_id": "BV_SAT_DEP_KEY",
+            "dv_image_name": "BV-3SATELLITE-DEPKEY.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_dp_",
+                "SDP_"
+            ],
+            "dv_description": "Business Vault Satellite with a dependent-child key"
+        },
+        {
+            "dv_id": "BV_SAT_MULTIACTIVE",
+            "dv_image_name": "BV-3SATELLITE-MULTIACTIVE.png",
+            "dv_type": "SATELLITE",
+            "dv_naming_convention": [
+                "sat_ma_",
+                "SMA_"
+            ],
+            "dv_description": "Business Vault Multi-active satellite"
+        },
+        {
+            "dv_id": "RV_LINK",
+            "dv_image_name": "RV-2LINK.png",
+            "dv_type": "LINK",
+            "dv_naming_convention": [
+                "lnk_",
+                "L_"
+            ],
+            "dv_description": "Raw Vault Link"
+        },
+        {
+            "dv_id": "RV_LINK_DEP_KEY",
+            "dv_image_name": "RV-2LINK-DEPKEY.png",
+            "dv_type": "LINK",
+            "dv_naming_convention": [
+                "lnk_dp_",
+                "LDP_"
+            ],
+            "dv_description": "Raw Vault Link with a dependent-child key"
+        },
+        {
+            "dv_id": "RV_LINK_HIERARCHY",
+            "dv_image_name": "RV-2LINK-HIERARCHY.png",
+            "dv_type": "LINK",
+            "dv_naming_convention": [
+                "lnk_",
+                "L_"
+            ],
+            "dv_description": "Raw Vault Hierarchy link (HAL)"
+        },
+        {
+            "dv_id": "RV_LINK_SAME_AS",
+            "dv_image_name": "RV-2LINK-SAME-AS.png",
+            "dv_type": "LINK",
+            "dv_naming_convention": [
+                "lnk_sa_",
+                "LSA_"
+            ],
+            "dv_description": "Raw Vault Same-as link (LSA)"
+        },
+        {
+            "dv_id": "RV_LINK_WITH_HIERARCHY",
+            "dv_image_name": "RV-2LINK-WITH-HIERARCHY.png",
+            "dv_type": "LINK",
+            "dv_naming_convention": [
+                "lnk_hy_",
+                "LHY_"
+            ],
+            "dv_description": "Raw Vault link with Hierarchy (LHV)"
+        },
+        {
+            "dv_id": "RV_LINK_WITH_SAME_AS",
+            "dv_image_name": "RV-2LINK-WITH-SAME-AS.png",
+            "dv_type": "LINK",
+            "dv_naming_convention": [
+                "lnk_sa_",
+                "LSA_"
+            ],
+            "dv_description": "Raw Vault link with Same-as (LSA)"
+        },
+        {
+            "dv_id": "RV_LINK_NON_HISTORIZED",
+            "dv_image_name": "RV-2NON-HISTORISED-LINK.png",
+            "dv_type": "LINK",
+            "dv_naming_convention": [
+                "lnk_nh_",
+                "LNH_"
+            ],
+            "dv_description": "Raw Vault Link Non Historized"
+        },
+        {
+            "dv_id": "BV_LINK",
+            "dv_image_name": "BV-2LINK.png",
+            "dv_type": "LINK",
+            "dv_naming_convention": [
+                "lnk_",
+                "L_"
+            ],
+            "dv_description": "Business Vault Link"
+        },
+        {
+            "dv_id": "BV_LINK_DEP_KEY",
+            "dv_image_name": "BV-2LINK-DEPKEY.png",
+            "dv_type": "LINK",
+            "dv_naming_convention": [
+                "lnk_dp_",
+                "LDP_"
+            ],
+            "dv_description": "Business Vault Link with dependent child key"
+        },
+        {
+            "dv_id": "BV_LINK_EXPLORE",
+            "dv_image_name": "BV-2LINK-EXPLORE.png",
+            "dv_type": "LINK",
+            "dv_naming_convention": [
+                "lnk_ep_",
+                "LEP_bv"
+            ],
+            "dv_description": "Business Vault Exploration link"
+        },
+        {
+            "dv_id": "BRIDGE",
+            "dv_image_name": "BRIDGE.png",
+            "dv_type": "BRIDGE",
+            "dv_naming_convention": [
+                "bdg_",
+                "B_"
+            ],
+            "dv_description": "Bridge"
+        },
+        {
+            "dv_id": "BRIDGE_SEQ",
+            "dv_image_name": "BRIDGE-SEQ.png",
+            "dv_type": "BRIDGE",
+            "dv_naming_convention": [
+                "bdg_",
+                "B_"
+            ],
+            "dv_description": ""
+        },
+        {
+            "dv_id": "PIT",
+            "dv_image_name": "PIT.png",
+            "dv_type": "PIT",
+            "dv_naming_convention": [
+                "pit_",
+                "P_"
+            ],
+            "dv_description": ""
+        },
+        {
+            "dv_id": "PIT_SEQ",
+            "dv_image_name": "PIT-SEQ.png",
+            "dv_type": "PIT",
+            "dv_naming_convention": [
+                "pit_",
+                "P_"
+            ],
+            "dv_description": ""
+        },
+        {
+            "dv_id": "REFERENCE",
+            "dv_image_name": "REFERENCE.png",
+            "dv_type": "REFERENCE",
+            "dv_naming_convention": [
+                "ref_",
+                "R_"
+            ],
+            "dv_description": ""
+        },
+        {
+            "dv_id": "STAGING",
+            "dv_image_name": "STAGING.png",
+            "dv_type": "STAGING",
+            "dv_naming_convention": [
+                "stg_",
+                "STG_"
+            ],
+            "dv_description": ""
+        },
+        {
+            "dv_id": "VIEW",
+            "dv_image_name": "VIEW.png",
+            "dv_type": "VIEW",
+            "dv_naming_convention": [
+                "vw_",
+                "V_"
+            ],
+            "dv_description": ""
+        }
+    ]
+}

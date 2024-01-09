@@ -1,0 +1,83 @@
+
+diagram: Demo DV Diagram Code
+entities:
+# Orders Domain
+
+  - name: hub_order
+    type: RV_HUB
+    description: Hub holds keys for Orders business entity.
+    connections: 
+      - to: sat_order
+        cardinality: one-to-one
+    schema:
+        name: ORDER.PUBLIC.HUB_ORDER
+        type: table
+        description: HUB Order Snowflake table
+        fields:
+        - name: order_hk
+          type: str
+          mode: Required
+          description: Order Hash Key
+        - name: order_nk
+          type: str
+          mode: Required
+          description: Order Natural Key
+        - name: load_date
+          type: date
+          mode: Required
+          description: First Load Date  
+        - name: source
+          type: str
+          mode: Required
+          description: Record source system       
+  
+    
+  - name: hub_order_line
+    type: RV_HUB
+    connections: 
+      - to: sat_order_line    
+        cardinality: one-to-one
+    
+  - name: lnk_customer_order
+    type: RV_LINK
+    connections:
+      - to: 
+        - hub_order
+        - hub_customer
+        cardinality: many-to-one
+    
+  - name: lnk_product_order_line
+    type: RV_LINK
+    connections:
+      - to: [hub_order, hub_product]
+        cardinality: many-to-one
+      - to: hub_order_line
+        cardinality: one-to-one
+      
+
+  - name: sat_order
+    type: RV_SATELLITE
+    
+  - name: sat_order_line
+    type: RV_SATELLITE        
+        
+        
+# Customer Domain        
+  - name: hub_customer
+    type: RV_HUB    
+    connections:
+      - to: [sat_customer, sat_customer_pii]
+        cardinality: one-to-one
+    
+  - name: sat_customer
+    type: RV_SATELLITE
+    
+# Product Domain        
+  - name: hub_product
+    type: RV_HUB    
+    connections:
+      - to: sat_product
+        cardinality: one-to-one   
+    
+  - name: sat_product
+    type: RV_SATELLITE
