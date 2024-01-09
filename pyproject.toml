@@ -6,15 +6,16 @@ authors = ["Jonatas Architect <jonatas.architect@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9.2"
+python = "3.9.2"
 streamlit = "^1.29.0"
 streamlit-agraph = "^0.0.45"
-pydantic = "^2.5.2"
+pydantic = "^2.5.3"
 pydantic-settings = "^2.1.0"
 pyyaml = "^6.0.1"
 streamlit-code-editor = "^0.1.10"
 pandas = "^2.1.4"
 st-pages = "^0.4.5"
+
 
 
 [tool.poetry.group.dev.dependencies]
