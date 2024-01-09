@@ -3,7 +3,11 @@ from typing import List
 
 import pandas as pd
 from core.utils import parse_diagram_code
-from core.validations import validate_entity_naming_convention, validate_entity_type
+from core.validations import (
+    validate_entity_connections,
+    validate_entity_naming_convention,
+    validate_entity_type,
+)
 from model import DataVaultModel, DVParameter
 from repositories import LocalRepository
 
@@ -41,10 +45,15 @@ class DataVaultService:
             param.id: param.dv_naming_convention
             for param in self.parameter_repository.list()
         }
+        entity_type_group = {
+            param.id: param.dv_type
+            for param in self.parameter_repository.list()
+        }
 
         for entity in tmp_model.entities:
             validate_entity_type(entity, entity_type_list)
             validate_entity_naming_convention(entity, entity_naming_convention)
+            validate_entity_connections(entity, tmp_model.entities, entity_type_group)
 
         self.data_vault_model = tmp_model
         return self.data_vault_model

@@ -47,6 +47,31 @@ def validate_entity_naming_convention(
         )
 
 
-def validate_entity_connection() -> None:
-    """TODO."""
-    pass
+def validate_entity_connections(
+    dv_entity: DataVaultEntity,
+    all_entities: List[DataVaultEntity],
+    entity_type_group: Dict[str, List[str]],
+) -> None:
+    """Validate data vault entity connections.
+
+    - Satellite can´t not connect between themselves.
+
+    Args:
+        dv_entity (DataVaultEntity): Entity to validation.
+        all_entities (List[DataVaultEntity]): All entities for comparison.
+        entity_type_group (Dict[str, List[str]]): Entity Type and Groups.
+
+    Raises:
+        exceptions.DataVaultSatelliteConnectionError: _description_
+    """
+    # Validate Satellite Connection
+    if entity_type_group[dv_entity.type] == "SATELLITE":
+        if  dv_entity.connections:
+            for connection in dv_entity.connections:
+                for ent in all_entities:
+                    if ent.label == connection.target:
+                        if entity_type_group[ent.type] == "SATELLITE":
+                            raise exceptions.DataVaultSatelliteConnectionError(
+                                dv_entity.label, ent.label
+                            )
+                        break

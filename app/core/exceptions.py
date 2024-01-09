@@ -27,10 +27,22 @@ class DataVaultEntityTypeError(DataVaultModelValidationError):
 
 
 class DataVaultNamingConventionError(DataVaultModelValidationError):
-    """Class  Data Vault Naming Convention Error Exception."""
+    """Class Data Vault Naming Convention Error Exception."""
 
     def __init__(self, label: str, type: str, options: List[str]) -> None:
         self.message = (
             f"{label} is classified as {type} and should start with {options}."
         )
         super().__init__(self.message)
+
+
+class DataVaultSatelliteConnectionError(DataVaultModelValidationError):
+    """Class Data Vault Satellite Connection Error Exception."""
+
+    def __init__(self, entity_source: str, entity_target: str) -> None:
+        self.message = (
+            f"Forbidden conenction between Satellites entities: \
+                Source({entity_source}), Target({entity_target})."
+        )
+        super().__init__(self.message)
+
