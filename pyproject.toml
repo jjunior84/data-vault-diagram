@@ -6,7 +6,6 @@ authors = ["Jonatas Architect <jonatas.architect@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.9.2"
 streamlit = "^1.29.0"
 streamlit-agraph = "^0.0.45"
 pydantic = "^2.5.3"
