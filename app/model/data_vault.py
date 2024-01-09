@@ -1,5 +1,5 @@
 """Module to register schemas used to enhance entity specification."""
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Union
 
 from pydantic import BaseModel, Field, field_validator, model_validator
 
@@ -8,10 +8,10 @@ class EntityFieldSchema(BaseModel):
     """Data class representing a field of entity."""
 
     name: str
-    type: str | None = None
-    mode: str | None = None
-    description: str | None = None
-    extra: Dict[str, str] | None = None
+    type: str = None
+    mode: str = None
+    description: str = None
+    extra: Dict[str, str] = None
 
 
 class EntitySchema(BaseModel):
@@ -19,16 +19,16 @@ class EntitySchema(BaseModel):
 
     name: str
     type: str
-    description: str | None = None
-    fields: List[EntityFieldSchema] | None = None
-    extra: Dict[str, str] | None = None
+    description: str = None
+    fields: List[EntityFieldSchema] = None
+    extra: Dict[str, str] = None
 
 
 class Connection(BaseModel):
     """Base data class represents Connection entity."""
 
-    target: str | List[str] = Field(alias="to")
-    cardinality: str | None = None
+    target: Union[str, List[str]] = Field(alias="to")
+    cardinality: str = None
     extra_attr: Dict[str, Any] = None
 
 

@@ -1,5 +1,5 @@
 """Module for diagram components."""
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 import pandas as pd
 import streamlit as st
@@ -16,17 +16,17 @@ class DiagramService:
     def __init__(
         self,
         parameter_repository: LocalRepository,
-        config: Config | None = None,
+        config: Config = None,
     ) -> None:
         self.parameter_repository = parameter_repository
         self.config = config if config else Config(from_json=settings.DIAGRAM_CONFIG)
 
-    def _generate_title(self, entity: DataVaultEntity) -> str | None:
+    def _generate_title(self, entity: DataVaultEntity) -> Optional[str] :
         """Generate specification to be used as title for Node based on schema,
         It will affect the mouse hover description on the diagram.
 
         Returns:
-            str | None: HTML as text formatted.
+            Optional[str]: HTML as text formatted.
         """
         return entity.description if entity.description else entity.label
 
